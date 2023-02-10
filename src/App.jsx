@@ -1,6 +1,7 @@
 import Favorite from './Favorite'
 import './App.css'
 import Menu from './Menu'
+import DataFetcher from '../DataFetcher'
 
 function App() {
 
@@ -17,6 +18,17 @@ another way children props = change renderprops to children in toggler component
                     <Menu on={on} toggle={toggle}/>
                 )}}
             </Toggler> */}
+      <DataFetcher url="https://swapi.dev/api/people/1/">
+        {(data, loading, ) => {
+          return (
+            loading ?
+              <h1>Loading...</h1> : <p>{ JSON.stringify(data)} </p>
+
+              
+          )
+        }}
+      </DataFetcher>
+
     </>
 
   )
