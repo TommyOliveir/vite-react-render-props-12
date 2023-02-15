@@ -4,7 +4,7 @@ import Toggler from "./Toggler"
 function Menu(props) {
 
     return (
-        <Toggler defaultOnValue={true} render={({on, toggle}) => (
+        <Toggler defaultOnValue={true} render={({on, toggle}) =>  (
             <div>
                 <button onClick={toggle}>{on ? "Hide" : "Show"} Menu </button>
                 <nav style={{ display: on ? "block" : "none" }}>
